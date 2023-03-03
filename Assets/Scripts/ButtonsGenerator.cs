@@ -11,7 +11,6 @@ public class ButtonsGenerator : MonoBehaviour
 
 		for (int index = 1; index <= maxLevel + 1; index++)
 		{
-			//hello
 			int stars;
 			stars = PlayerPrefs.GetInt("Level" + index.ToString() + "maxStars");
 			Debug.Log(stars);
