@@ -14,9 +14,7 @@ public class BallShooting : MonoBehaviour
 	[SerializeField] float force;
 	[SerializeField] float stopSpeed;
 	[Header("Camera")]
-
 	[SerializeField] float camSize;
-	[SerializeField] float doubleFingerSizeMultiplier;
 	ParticleSystem particle;
 	bool wasShoot = true;
 	CinemachineVirtualCamera vcam;
@@ -81,7 +79,8 @@ public class BallShooting : MonoBehaviour
 
 			Level level = FindObjectOfType<Level>();
 			Vector2 basePos = level.transform.position;
-			Vector2 camPos = basePos + (startPos - touch.position) / doubleFingerSizeMultiplier;
+			Vector2 camPos = basePos + (startPos - touch.position) / 10;
+			Debug.Log(basePos);
 			camFollow.position = camPos;
 
 			vcam.Follow = camFollow;
