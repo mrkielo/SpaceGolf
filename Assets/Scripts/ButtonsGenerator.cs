@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonsGenerator : MonoBehaviour
 {
@@ -8,7 +9,11 @@ public class ButtonsGenerator : MonoBehaviour
 	void Start()
 	{
 		int maxLevel = PlayerPrefs.GetInt("finishedLevel");
-
+		int totalScenes = SceneManager.sceneCountInBuildSettings;
+		if (totalScenes - 2 < maxLevel)
+		{
+			maxLevel = totalScenes - 2;
+		}
 		for (int index = 1; index <= maxLevel + 1; index++)
 		{
 			int stars;

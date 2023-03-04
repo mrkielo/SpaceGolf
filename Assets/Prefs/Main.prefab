@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1f7de57fe31cd4bbbbc17579216900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelButton: {fileID: 2743298943636934821}
   star1: {fileID: 2743298943266890707}
   star2: {fileID: 2743298943196307254}
   star3: {fileID: 2743298944269366872}

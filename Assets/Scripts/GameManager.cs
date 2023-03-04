@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
 		//ball.gameObject.SetActive(false);
 		//Destroy(ball.gameObject);
 		uiManager.nextLevelUI.gameObject.SetActive(true);
+
+		if (SceneManager.GetActiveScene().buildIndex + 2 > SceneManager.sceneCountInBuildSettings)
+		{
+			uiManager.nextLevelUI.HideNextLevelButton();
+		}
+
 		Stars();
 
 
@@ -79,6 +85,7 @@ public class GameManager : MonoBehaviour
 		if (!PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "maxStars"))
 		{
 			PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "maxStars", stars);
+			PlayerPrefs.SetInt("Stars", PlayerPrefs.GetInt("Stars") + stars);
 		}
 		else
 		{
