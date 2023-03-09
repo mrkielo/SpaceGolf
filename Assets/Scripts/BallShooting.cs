@@ -52,7 +52,6 @@ public class BallShooting : MonoBehaviour
 			{
 				case TouchPhase.Began:
 					startPos = touchPos;
-					//startPos = transform.TransformVector(startPos);
 					break;
 				case TouchPhase.Ended:
 					lineRenderer.enabled = false;
@@ -79,7 +78,7 @@ public class BallShooting : MonoBehaviour
 
 			Level level = FindObjectOfType<Level>();
 			Vector2 basePos = level.transform.position;
-			Vector2 camPos = basePos + (startPos - touch.position) / 10;
+			Vector2 camPos = basePos + (startPos - touch.position) / 30;
 			Debug.Log(basePos);
 			camFollow.position = camPos;
 
@@ -109,5 +108,13 @@ public class BallShooting : MonoBehaviour
 		rb.AddForce(dir * force, ForceMode2D.Impulse);
 		gameManager.shoots++;
 		wasShoot = true;
+	}
+
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.layer == LayerMask.NameToLayer("Dead"))
+		{
+			gameManager.Die();
+		}
 	}
 }

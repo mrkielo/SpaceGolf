@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 	[Header("UI Elements")]
 	[SerializeField] Text shootsCounter;
 	[SerializeField] Text starsCounter;
+	[SerializeField] GameObject pauseMenu;
+	[SerializeField] GameObject deadMenu;
 	public NextLevelUI nextLevelUI;
 
 
@@ -19,9 +21,12 @@ public class UIManager : MonoBehaviour
 		//nextLevelUI =GetComponentInChildren<NextLevelUI>();
 
 		gameManager = FindObjectOfType<GameManager>();
-
 	}
 
+	void Start()
+	{
+		ClosePauseMenu();
+	}
 
 	void Update()
 	{
@@ -62,7 +67,25 @@ public class UIManager : MonoBehaviour
 
 	public void GoHome()
 	{
+		Time.timeScale = 1f;
 		SceneManager.LoadScene(0);
+	}
+
+	public void OpenPauseMenu()
+	{
+		pauseMenu.SetActive(true);
+		Time.timeScale = 0f;
+	}
+
+	public void ClosePauseMenu()
+	{
+		pauseMenu.SetActive(false);
+		Time.timeScale = 1f;
+	}
+
+	public void DeadMenu()
+	{
+		deadMenu.SetActive(true);
 	}
 
 

@@ -36,18 +36,13 @@ public class GameManager : MonoBehaviour
 	void Win()
 	{
 		ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-		//ball.gameObject.SetActive(false);
-		//Destroy(ball.gameObject);
 		uiManager.nextLevelUI.gameObject.SetActive(true);
 
 		if (SceneManager.GetActiveScene().buildIndex + 2 > SceneManager.sceneCountInBuildSettings)
 		{
 			uiManager.nextLevelUI.HideNextLevelButton();
 		}
-
 		Stars();
-
-
 		if (PlayerPrefs.HasKey("finishedLevel"))
 		{
 			if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("finishedLevel"))
@@ -59,8 +54,6 @@ public class GameManager : MonoBehaviour
 		{
 			PlayerPrefs.SetInt("finishedLevel", SceneManager.GetActiveScene().buildIndex);
 		}
-
-
 		hole.isIn = false;
 	}
 
@@ -96,6 +89,11 @@ public class GameManager : MonoBehaviour
 				PlayerPrefs.SetInt("Stars", PlayerPrefs.GetInt("Stars") + stars - maxStars);
 			}
 		}
+	}
+
+	public void Die()
+	{
+		uiManager.DeadMenu();
 	}
 
 }

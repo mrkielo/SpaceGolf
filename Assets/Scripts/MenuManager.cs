@@ -26,7 +26,15 @@ public class MenuManager : MonoBehaviour
 	public void Play()
 	{
 		if (PlayerPrefs.HasKey("finishedLevel"))
-			SceneManager.LoadScene(PlayerPrefs.GetInt("finishedLevel") + 1);
+			if (PlayerPrefs.GetInt("finishedLevel") > SceneManager.sceneCountInBuildSettings - 2)
+			{
+				SceneManager.LoadScene(PlayerPrefs.GetInt("finishedLevel")); //last level in build
+			}
+			else
+			{
+				SceneManager.LoadScene(PlayerPrefs.GetInt("finishedLevel") + 1); //normal case
+			}
+
 		else
 			SceneManager.LoadScene(1);
 	}
@@ -41,7 +49,7 @@ public class MenuManager : MonoBehaviour
 
 	public void ShowMain()
 	{
-		mainMenu.SetActive(true);
+		mainMenu.GetComponent<Fade>().Show();
 		rocket.Show(fadeDuration);
 		levelsMenu.GetComponent<Fade>().Hide();
 		settingsMenu.GetComponent<Fade>().Hide();
@@ -52,7 +60,6 @@ public class MenuManager : MonoBehaviour
 		mainMenu.GetComponent<Fade>().Hide();
 		levelsMenu.GetComponent<Fade>().Hide();
 		rocket.Hide(fadeDuration);
-
 	}
 
 	public void AreYouReallySure(Action yes, Action no)
