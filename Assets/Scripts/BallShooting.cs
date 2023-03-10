@@ -17,6 +17,7 @@ public class BallShooting : MonoBehaviour
 	[SerializeField] float camSize;
 	ParticleSystem particle;
 	bool wasShoot = true;
+	bool canShoot = true;
 	CinemachineVirtualCamera vcam;
 	float camVelocity;
 	Transform camFollow;
@@ -41,9 +42,13 @@ public class BallShooting : MonoBehaviour
 			particle.Play();
 			wasShoot = false;
 		}
+		if (Input.touchCount == 0)
+		{
+			canShoot = true;
+		}
 
 
-		if (Input.touchCount == 1)
+		if (Input.touchCount == 1 && canShoot)
 		{
 			touch = Input.GetTouch(0);
 			touchPos = Camera.main.ScreenToWorldPoint(touch.position);
@@ -70,6 +75,7 @@ public class BallShooting : MonoBehaviour
 		}
 		if (Input.touchCount == 2)
 		{
+			canShoot = false;
 			touch = Input.GetTouch(1);
 			if (touch.phase == TouchPhase.Began)
 			{

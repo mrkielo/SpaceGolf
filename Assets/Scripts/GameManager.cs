@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] int twoStars;
 	[SerializeField] int oneStar;
 	int stars;
-	BallShooting ball;
+	public BallShooting ball;
 	Hole hole;
 	void Awake()
 	{

@@ -75,12 +75,15 @@ public class UIManager : MonoBehaviour
 	{
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
+		gameManager.ball.enabled = false;
 	}
 
 	public void ClosePauseMenu()
 	{
 		pauseMenu.SetActive(false);
 		Time.timeScale = 1f;
+		gameManager.ball.enabled = true;
+
 	}
 
 	public void DeadMenu()
