@@ -68,9 +68,10 @@ public class BallShooting : MonoBehaviour
 
 			if (isIdle())
 			{
+				Vector2 ballPos2 = new Vector2(transform.position.x, transform.position.y);
 				lineRenderer.enabled = true;
-				lineRenderer.SetPosition(1, touchPos);
-				lineRenderer.SetPosition(0, startPos);
+				lineRenderer.SetPosition(1, ballPos2 + startPos - touchPos);
+				lineRenderer.SetPosition(0, ballPos2);
 			}
 		}
 		if (Input.touchCount == 2)

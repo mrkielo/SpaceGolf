@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 	{
 		ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		uiManager.nextLevelUI.gameObject.SetActive(true);
+		ball.enabled = false;
 
 		if (SceneManager.GetActiveScene().buildIndex + 2 > SceneManager.sceneCountInBuildSettings)
 		{
