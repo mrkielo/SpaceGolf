@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonsGenerator : MonoBehaviour
 {
@@ -24,7 +25,14 @@ public class ButtonsGenerator : MonoBehaviour
 			button.transform.SetParent(gameObject.transform, false);
 			button.GetComponent<LevelButton>().Set(number, stars);
 		}
+		for (int index = maxLevel + 2; index < totalScenes; index++)
+		{
+			int number = index;
+			GameObject button = Instantiate(buttonPrefab, transform.position, new Quaternion(0, 0, 0, 0));
+			button.transform.SetParent(gameObject.transform, false);
+			button.GetComponent<LevelButton>().Set(number, 0);
+			button.GetComponent<Button>().interactable = false;
+
+		}
 	}
-
-
 }

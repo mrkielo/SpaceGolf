@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
 	void Update()
 	{
-		if (hole.isIn) Win();
+		if (hole.isIn && !ball.isDead) Win();
 	}
 
 	void Win()

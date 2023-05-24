@@ -675,7 +675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2145464747420622692, guid: 80bb08d1acd7d0f4da961bdd550e2ff9, type: 3}
       propertyPath: m_Text
-      value: hold two fingers to zoom out the camera
+      value: 'Drag with one finger to shoot the ball
+
+
+        hold two fingers to
+        zoom out the camera'
       objectReference: {fileID: 0}
     - target: {fileID: 2145464747420622692, guid: 80bb08d1acd7d0f4da961bdd550e2ff9, type: 3}
       propertyPath: m_FontData.m_BestFit

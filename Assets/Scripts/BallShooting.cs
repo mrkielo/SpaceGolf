@@ -21,6 +21,7 @@ public class BallShooting : MonoBehaviour
 	CinemachineVirtualCamera vcam;
 	float camVelocity;
 	Transform camFollow;
+	public bool isDead = false;
 
 	void Start()
 	{
@@ -122,6 +123,7 @@ public class BallShooting : MonoBehaviour
 		if (other.gameObject.layer == LayerMask.NameToLayer("Dead"))
 		{
 			gameManager.Die();
+			isDead = true;
 		}
 	}
 }
