@@ -7,15 +7,24 @@ using UnityEngine.UI;
 public class ButtonsGenerator : MonoBehaviour
 {
 	[SerializeField] GameObject buttonPrefab;
+	[SerializeField] int minLevel;
+	[SerializeField] int maxLevel;
 	void Start()
 	{
-		int maxLevel = PlayerPrefs.GetInt("finishedLevel");
+		CreateButtons(minLevel, maxLevel);
+	}
+
+	public void CreateButtons(int minLevel, int maxLevel)
+	{
+		DeleteButtons();
+		int finishedLevel = PlayerPrefs.GetInt("finishedLevel");
 		int totalScenes = SceneManager.sceneCountInBuildSettings;
-		if (totalScenes - 2 < maxLevel)
-		{
-			maxLevel = totalScenes - 2;
-		}
-		for (int index = 1; index <= maxLevel + 1; index++)
+
+		if (minLevel < 1) minLevel = 1;
+		if (maxLevel > totalScenes) maxLevel = totalScenes;
+		if (totalScenes - 2 < finishedLevel) finishedLevel = totalScenes - 2;
+
+		for (int index = 1; index <= finishedLevel + 1; index++)
 		{
 			int stars;
 			stars = PlayerPrefs.GetInt("Level" + index.ToString() + "maxStars");
@@ -25,7 +34,7 @@ public class ButtonsGenerator : MonoBehaviour
 			button.transform.SetParent(gameObject.transform, false);
 			button.GetComponent<LevelButton>().Set(number, stars);
 		}
-		for (int index = maxLevel + 2; index < totalScenes; index++)
+		for (int index = finishedLevel + 2; index < totalScenes; index++)
 		{
 			int number = index;
 			GameObject button = Instantiate(buttonPrefab, transform.position, new Quaternion(0, 0, 0, 0));
@@ -33,6 +42,15 @@ public class ButtonsGenerator : MonoBehaviour
 			button.GetComponent<LevelButton>().Set(number, 0);
 			button.GetComponent<Button>().interactable = false;
 
+		}
+	}
+
+	void DeleteButtons()
+	{
+		Button[] buttons = GetComponentsInChildren<Button>(true);
+		foreach (Button button in buttons)
+		{
+			Destroy(button.gameObject);
 		}
 	}
 }
