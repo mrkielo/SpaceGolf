@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -94,16 +90,17 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 0f30fe2b2884a4642960e0ffd66977d2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -116,7 +113,9 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -158,145 +157,129 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 1.5087647, y: 4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 1.5087647, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 8.549667, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 8.549667, y: 4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 11.567196, y: 4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 11.567196, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 19.613945, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 19.613941, y: -8.5, z: 0}
       leftTangent: {x: 0.018205643, y: 1.2784569, z: 0}
       rightTangent: {x: -0.03827858, y: -2.6887, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -19.613949, y: -8.5, z: 0}
       leftTangent: {x: -0.009170532, y: -1.4367714, z: 0}
       rightTangent: {x: 0.009435654, y: 1.4787006, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -19.613947, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -11.567201, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -11.567199, y: 4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -8.549672, y: 4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -8.549667, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: -1.5087647, y: 8.5, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
   m_SpriteShape: {fileID: 11400000, guid: 49058e371087b49b18fb1c4177f3b7bd, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -304,11 +287,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!1971053207 &148932349
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -320,12 +313,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -334,6 +334,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -364,8 +365,9 @@ SpriteShapeRenderer:
   - {fileID: 21300012, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 21300008, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.0000019073486, y: 0, z: -0.0050649997}
-    m_Extent: {x: 20.113949, y: 9.000001, z: 0.0050649997}
+    m_Center: {x: -0.0000019073486, y: 0, z: 0}
+    m_Extent: {x: 20.113949, y: 9.000001, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!4 &148932351
 Transform:
   m_ObjectHideFlags: 0
@@ -373,12 +375,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148932347}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9941908, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &743373521
 GameObject:
@@ -409,12 +412,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -423,6 +433,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -442,8 +453,9 @@ SpriteShapeRenderer:
   - {fileID: 21300016, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.24448252, y: 1.4645088, z: -0.00501}
-    m_Extent: {x: 3.0169244, y: 1.4645088, z: 0.00501}
+    m_Center: {x: -0.24448252, y: 1.6648705, z: 0}
+    m_Extent: {x: 3.0169244, y: 1.264147, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!114 &743373523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,37 +476,33 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -1.657366, y: 1.6419101, z: 0}
       leftTangent: {x: -1.1476898, y: 0.70850587, z: 0}
       rightTangent: {x: 0.9156313, y: -0.56524897, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: 1.2286466, y: 1.6729, z: 0}
       leftTangent: {x: -0.48632717, y: 0.1658783, z: 0}
       rightTangent: {x: 1.9114523, y: -0.35046864, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 2.742056, y: 1.7106463, z: 0}
       leftTangent: {x: -2.1672134, y: 0.049874783, z: 0}
       rightTangent: {x: 2.55785, y: -0.058864117, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: e22936b0b355342d7b0855d7e938963e, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -502,11 +510,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!4 &743373524
 Transform:
   m_ObjectHideFlags: 0
@@ -514,12 +532,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743373521}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.93, y: -3.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863446550
 GameObject:
@@ -550,12 +569,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -564,6 +590,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -583,8 +610,9 @@ SpriteShapeRenderer:
   - {fileID: 21300018, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: 0.65924764, y: -0.34545112, z: -0.005}
-    m_Extent: {x: 3.7870207, y: 1.0617188, z: 0.005}
+    m_Center: {x: 0.65924764, y: -0.34545112, z: 0}
+    m_Extent: {x: 3.7870207, y: 1.0617188, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!114 &863446552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,19 +633,17 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 3.4300003, y: -0.29999995, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: d5a6d064bf23c452287ef7371144927c, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -625,11 +651,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!4 &863446553
 Transform:
   m_ObjectHideFlags: 0
@@ -637,12 +673,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863446550}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.20000005, y: 0.16000013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108206408
 GameObject:
@@ -682,37 +719,33 @@ MonoBehaviour:
       rightTangent: {x: 1.4347038, y: 0.07331753, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -3.25, y: -2.25, z: 0}
       leftTangent: {x: -1.9918365, y: -0.24203491, z: 0}
       rightTangent: {x: 1.9918365, y: 0.24203491, z: 0}
       mode: 1
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 0.25, y: -0.75, z: 0}
       leftTangent: {x: -1.1856556, y: -0.51208687, z: 0}
       rightTangent: {x: 1.4588194, y: 0.6300669, z: 0}
       mode: 1
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 5.75, y: -0.75, z: 0}
       leftTangent: {x: -1.556633, y: 1.3201184, z: 0}
       rightTangent: {x: 1.7604151, y: -1.492938, z: 0}
       mode: 1
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: d5a6d064bf23c452287ef7371144927c, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -720,11 +753,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 16
   m_ColliderOffset: -1
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!1971053207 &1108206410
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -736,12 +779,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -750,6 +800,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -769,8 +820,9 @@ SpriteShapeRenderer:
   - {fileID: 21300018, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.6706662, y: -1.1484635, z: -0.005}
-    m_Extent: {x: 7.8728127, y: 2.149938, z: 0.005}
+    m_Center: {x: -0.6706662, y: -1.1484635, z: 0}
+    m_Extent: {x: 7.8728127, y: 2.149938, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!4 &1108206412
 Transform:
   m_ObjectHideFlags: 0
@@ -778,12 +830,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108206408}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.75, y: -3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1242806276
 GameObject:
@@ -834,9 +887,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -870,12 +931,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242806276}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680581995
 GameObject:
@@ -915,28 +977,25 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -0.31037712, y: 0.21611452, z: 0}
       leftTangent: {x: -1.9731617, y: -0.3641789, z: 0}
       rightTangent: {x: 2.4578047, y: 0.4536276, z: 0}
       mode: 1
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 1
+      m_CornerMode: 1
     - position: {x: 6.107708, y: 3.1037588, z: 0}
       leftTangent: {x: -2.9189305, y: -0.060035706, z: 0}
       rightTangent: {x: 1.9259801, y: 0.03961301, z: 0}
       mode: 1
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: d5a6d064bf23c452287ef7371144927c, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -944,11 +1003,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!1971053207 &1680581997
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -960,12 +1029,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -974,6 +1050,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -993,8 +1070,9 @@ SpriteShapeRenderer:
   - {fileID: 21300018, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.3205309, y: 1.064537, z: -0.005}
-    m_Extent: {x: 7.4460506, y: 3.1131372, z: 0.005}
+    m_Center: {x: -0.3205309, y: 1.064537, z: 0}
+    m_Extent: {x: 7.4460506, y: 3.1131372, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!4 &1680581999
 Transform:
   m_ObjectHideFlags: 0
@@ -1002,12 +1080,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680581995}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.83, y: -2.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1804489810
 GameObject:
@@ -1047,73 +1126,65 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -5.6791887, y: 1.4878502, z: 0}
       leftTangent: {x: -1.1476898, y: 0.70850587, z: 0}
       rightTangent: {x: 0.9156313, y: -0.56524897, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: -2.8751068, y: 0.9929681, z: 0}
       leftTangent: {x: -0.48632717, y: 0.1658783, z: 0}
       rightTangent: {x: 1.9114523, y: -0.35046864, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -1.544878, y: 1.0378137, z: 0}
       leftTangent: {x: -2.1672134, y: 0.049874783, z: 0}
       rightTangent: {x: 2.55785, y: -0.058864117, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: 0.6537266, y: 2.6101074, z: 0}
       leftTangent: {x: -0.81578255, y: -1.1062441, z: 0}
       rightTangent: {x: 3.626093, y: 0.50750494, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 2.0591574, y: 2.694005, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: 4.5411544, y: 3.1485863, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 5.938326, y: 3.0802164, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: e22936b0b355342d7b0855d7e938963e, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -1121,11 +1192,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!1971053207 &1804489812
 SpriteShapeRenderer:
   m_ObjectHideFlags: 0
@@ -1137,12 +1218,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1151,6 +1239,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1170,8 +1259,9 @@ SpriteShapeRenderer:
   - {fileID: 21300016, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.5860243, y: 2.0703952, z: -0.00503}
-    m_Extent: {x: 6.5839233, y: 2.295485, z: 0.00503}
+    m_Center: {x: -0.5860243, y: 2.070395, z: 0}
+    m_Extent: {x: 6.5839233, y: 2.2954848, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!4 &1804489814
 Transform:
   m_ObjectHideFlags: 0
@@ -1179,12 +1269,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804489810}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.55, y: -7.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897297955
 GameObject:
@@ -1215,12 +1306,19 @@ SpriteShapeRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1229,6 +1327,7 @@ SpriteShapeRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1248,8 +1347,9 @@ SpriteShapeRenderer:
   - {fileID: 21300016, guid: 2a23c00cde465461fb598526b91deedc, type: 3}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.5359664, y: 2.7398272, z: -0.00503}
-    m_Extent: {x: 6.960102, y: 3.3909473, z: 0.00503}
+    m_Center: {x: -0.5359664, y: 2.7398272, z: 0}
+    m_Extent: {x: 6.960102, y: 3.3909473, z: 0}
+  m_SpriteSortPoint: 0
 --- !u!114 &1897297957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,73 +1370,65 @@ MonoBehaviour:
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -6.1325207, y: 0.6482034, z: 0}
       leftTangent: {x: -1.1476898, y: 0.70850587, z: 0}
       rightTangent: {x: 0.9156313, y: -0.56524897, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: -2.0394, y: 1.3667214, z: 0}
       leftTangent: {x: -0.48632717, y: 0.1658783, z: 0}
       rightTangent: {x: 1.9114523, y: -0.35046864, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: -0.64398956, y: 1.420696, z: 0}
       leftTangent: {x: -2.1672134, y: 0.049874783, z: 0}
       rightTangent: {x: 2.55785, y: -0.058864117, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: 1.4602585, y: 2.7928703, z: 0}
       leftTangent: {x: -0.81578255, y: -1.1062441, z: 0}
       rightTangent: {x: 3.626093, y: 0.50750494, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 2.7366886, y: 2.8838847, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 1
       corner: 0
+      m_CornerMode: 0
     - position: {x: 5.1822586, y: 4.9121447, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
     - position: {x: 6.4070053, y: 4.8949175, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
       height: 1
-      bevelCutoff: 0
-      bevelSize: 0
       spriteIndex: 0
       corner: 0
+      m_CornerMode: 0
   m_SpriteShape: {fileID: 11400000, guid: e22936b0b355342d7b0855d7e938963e, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
@@ -1344,11 +1436,21 @@ MonoBehaviour:
   m_AdaptiveUV: 1
   m_StretchUV: 0
   m_WorldSpaceUV: 0
+  m_CornerAngleThreshold: 30
   m_ColliderDetail: 4
   m_ColliderOffset: 0
   m_UpdateCollider: 0
-  m_OptimizeCollider: 1
-  m_OptimizeGeometry: 1
+  m_EnableTangents: 0
+  m_GeometryCached: 0
+  m_UTess2D: 1
+  m_UpdateShadow: 0
+  m_ShadowDetail: 16
+  m_ShadowOffset: 0.5
+  m_BoundsScale: 2
+  m_Creator: {fileID: 0}
+  m_Modifiers: []
+  m_ColliderSegment: []
+  m_ShadowSegment: []
 --- !u!4 &1897297958
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,10 +1458,23 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897297955}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.15, y: -4.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1242806280}
+  - {fileID: 148932351}
+  - {fileID: 1108206412}
+  - {fileID: 863446553}
+  - {fileID: 1680581999}
+  - {fileID: 1804489814}
+  - {fileID: 743373524}
+  - {fileID: 1897297958}

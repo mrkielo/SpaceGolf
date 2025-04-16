@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using Unity.Cinemachine;
 public class BallShooting : MonoBehaviour
 {
 	LineRenderer lineRenderer;
@@ -18,7 +18,7 @@ public class BallShooting : MonoBehaviour
 	ParticleSystem particle;
 	bool wasShoot = true;
 	bool canShoot = true;
-	CinemachineVirtualCamera vcam;
+	CinemachineCamera vcam;
 	float camVelocity;
 	Transform camFollow;
 	public bool isDead = false;
@@ -26,9 +26,9 @@ public class BallShooting : MonoBehaviour
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
-		vcam = FindObjectOfType<CinemachineVirtualCamera>();
+		vcam = FindFirstObjectByType<CinemachineCamera>();
 		vcam.Follow = transform;
-		gameManager = FindObjectOfType<GameManager>();
+		gameManager = FindFirstObjectByType<GameManager>();
 		lineRenderer = GetComponent<LineRenderer>();
 		particle = GetComponent<ParticleSystem>();
 		camFollow = new GameObject(name: "camFollow").GetComponent<Transform>();
@@ -84,19 +84,19 @@ public class BallShooting : MonoBehaviour
 				startPos = touch.position;
 			}
 
-			Level level = FindObjectOfType<Level>();
+			Level level = FindFirstObjectByType<Level>();
 			Vector2 basePos = level.transform.position;
 			Vector2 camPos = basePos + (startPos - touch.position) / 30;
 			Debug.Log(basePos);
 			camFollow.position = camPos;
 
 			vcam.Follow = camFollow;
-			vcam.m_Lens.OrthographicSize = Mathf.SmoothDamp(vcam.m_Lens.OrthographicSize, camSize * 2, ref camVelocity, 0.2f);
+			vcam.Lens.OrthographicSize = Mathf.SmoothDamp(vcam.Lens.OrthographicSize, camSize * 2, ref camVelocity, 0.2f);
 		}
 		else
 		{
 			vcam.Follow = transform;
-			vcam.m_Lens.OrthographicSize = Mathf.SmoothDamp(vcam.m_Lens.OrthographicSize, camSize, ref camVelocity, 0.2f);
+			vcam.Lens.OrthographicSize = Mathf.SmoothDamp(vcam.Lens.OrthographicSize, camSize, ref camVelocity, 0.2f);
 		}
 
 	}
@@ -106,8 +106,8 @@ public class BallShooting : MonoBehaviour
 		&& rb.linearVelocity.x > -stopSpeed
 		&& rb.linearVelocity.y < stopSpeed
 		&& rb.linearVelocity.y > -stopSpeed
-		&& vcam.m_Lens.OrthographicSize < camSize + 1
-		&& vcam.m_Lens.OrthographicSize > camSize - 1) return true;
+		&& vcam.Lens.OrthographicSize < camSize + 1
+		&& vcam.Lens.OrthographicSize > camSize - 1) return true;
 		else return false;
 	}
 
