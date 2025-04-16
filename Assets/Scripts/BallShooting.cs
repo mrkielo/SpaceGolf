@@ -102,10 +102,10 @@ public class BallShooting : MonoBehaviour
 	}
 	bool isIdle()
 	{
-		if (rb.velocity.x < stopSpeed
-		&& rb.velocity.x > -stopSpeed
-		&& rb.velocity.y < stopSpeed
-		&& rb.velocity.y > -stopSpeed
+		if (rb.linearVelocity.x < stopSpeed
+		&& rb.linearVelocity.x > -stopSpeed
+		&& rb.linearVelocity.y < stopSpeed
+		&& rb.linearVelocity.y > -stopSpeed
 		&& vcam.m_Lens.OrthographicSize < camSize + 1
 		&& vcam.m_Lens.OrthographicSize > camSize - 1) return true;
 		else return false;

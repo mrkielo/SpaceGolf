@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
 	void Win()
 	{
-		ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		ball.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
 		uiManager.nextLevelUI.gameObject.SetActive(true);
 		ball.enabled = false;
 
